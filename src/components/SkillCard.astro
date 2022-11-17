@@ -1,0 +1,15 @@
+---
+export interface Props {
+  title: string;
+  values: string[];
+}
+
+const { title, values } = Astro.props;
+---
+
+<div class="border border-slate-200 rounded-xl p-6">
+  <h3 class="font-bold mb-4">{title}</h3>
+  <ul class="">
+    {values.map((value) => <li class="list-disc ml-4">{value}</li>)}
+  </ul>
+</div>
