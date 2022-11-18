@@ -1,0 +1,14 @@
+---
+export interface Props {
+  text: string;
+  customClassname?: string;
+}
+
+const { text, customClassname } = Astro.props;
+---
+
+<div
+  class={`w-fit px-3 py-0.5 rounded-full border border-blue-600 text-blue-600 ${customClassname ? customClassname : ''}`}
+>
+  {text}
+</div>

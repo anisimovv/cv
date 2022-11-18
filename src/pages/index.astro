@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import SkillCard from "../components/SkillCard.astro";
 import TimelineArticle from "../components/TimelineArticle.astro";
 import CoursesCard from "../components/CoursesCard.astro";
+import Pill from "../components/Pill.astro";
+import ContactList from "../components/ContactList/ContactList.astro";
 
 const skills = [
   {
@@ -113,13 +115,9 @@ const courses = [
 <Layout title="Kyrylo Moghoshiia CV">
   <header class="flex justify-between max-w-4xl mx-auto my-20">
     <div class="max-w-lg">
-      <h1 class="font-bold text-4xl">Kyrylo Morhoshiia</h1>
-      <ul class="flex gap-4">
-        <li>kirill.anisimovv@gmail.com</li>
-        <li>Kharkiv, Ukraine</li>
-        <li>10 december 1994</li>
-      </ul>
-      <p>
+      <h1 class="font-bold text-4xl mb-2 text-slate-800">Kyrylo Morhoshiia</h1>
+      <ContactList className="mb-4" />
+      <p class="text-slate-800 leading-relaxed">
         Software engenieer mainly focused on React ecosystem. I like to build
         typesafe fullstack applications using cutting edge tech. Also I’m
         founder of small outsourcing agency.
@@ -129,7 +127,7 @@ const courses = [
       class="rounded-full w-[150px] h-[150px]"
       width="150"
       height="150"
-      src="https://via.placeholder.com/150"
+      src="/assets/avatar.jpg"
       alt="Kryrlo Morhoshiia avatar"
     />
   </header>
@@ -144,11 +142,7 @@ const courses = [
       </ul>
     </nav>
     <section class="max-w-4xl mx-auto mb-32">
-      <div
-        class="w-fit px-3 py-1 rounded-xl border border-blue-600 text-blue-600"
-      >
-        Skills
-      </div>
+      <Pill text="Skills" customClassname="mb-2" />
       <h1 class="font-bold text-4xl max-w-lg mb-10">
         List of tech and libraries used in recent projects
       </h1>
@@ -173,12 +167,9 @@ const courses = [
       }
     </section>
     <section class="max-w-4xl mx-auto mb-10">
-      <div
-        class="w-fit px-3 py-1 rounded-xl border border-blue-600 text-blue-600"
-      >
-        Skills
-      </div>
-      <h1 class="font-bold text-4xl max-w-lg mb-10">
+      <Pill text="Courses" customClassname="mb-2" />
+
+      <h1 class="font-bold text-4xl max-w-lg mb-10 font-sans">
         List of tech and libraries used in recent projects
       </h1>
       <div class="grid gap-6 grid-cols-3">

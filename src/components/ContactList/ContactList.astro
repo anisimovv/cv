@@ -1,0 +1,16 @@
+---
+import ContactListItem from "./ContactListItem.astro";
+import clsx from 'clsx';
+
+export interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<ul class={clsx("flex text-sm leading-none text-slate-600", className)}>
+  <ContactListItem label="kirill.anisimovv@gmail.com" />
+  <ContactListItem label="Kharkiv, Ukraine" />
+  <ContactListItem label="December 10, 1994" />
+</ul>

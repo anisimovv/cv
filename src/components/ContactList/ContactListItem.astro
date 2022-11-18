@@ -1,0 +1,9 @@
+---
+export interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<li class="mr-4 last:mr-0">{label}</li>
