@@ -1,0 +1,71 @@
+---
+import Pill from "../Pill.astro";
+import SectionTitle from "../SectionTitle.astro";
+import SkillCard from "./SkillCard.astro";
+
+const skills = [
+  {
+    title: "Core",
+    values: ["HTML", "CSS", "Java Script", "Type Script"],
+  },
+  {
+    title: "Frameworks",
+    values: ["React", "Next.js", "Astro", "Remix"],
+  },
+  {
+    title: "Styling",
+    values: ["Css modules", "Sass / Scss", "css-in-js", "Tailwind"],
+  },
+  {
+    title: "UI libraries",
+    values: ["Headless UI", "Radix", "Material UI", "Bootstrap"],
+  },
+  {
+    title: "State libraries",
+    values: [
+      "React Query / Apollo",
+      "Redux / Redux Toolkit",
+      "Zustand",
+      "Jotai",
+    ],
+  },
+  {
+    title: "Databases",
+    values: ["Planetscale", "Postgress", "Mysql / SQLight", "Mongodb"],
+  },
+  {
+    title: "ORM / ODM",
+    values: ["Prisma", "Type ORM", "Mongoose"],
+  },
+  {
+    title: "Mobile",
+    values: [
+      "React Native",
+      "Expo",
+      "React Navigation",
+      "React Native Reanimated",
+    ],
+  },
+  {
+    title: "Other",
+    values: [
+      "t3 stack",
+      "Vercel / Netlify / Heroku",
+      "AWS / Digital Ocean",
+      "Strapi / Story Block",
+    ],
+  },
+];
+---
+
+<section class="max-w-4xl mx-auto mb-32 p-6">
+  <Pill text="Skills" customClassname="mb-2" />
+  <SectionTitle text="List of tech and libraries used in recent projects" />
+  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+    {
+      skills.map(({ title, values }) => (
+        <SkillCard title={title} values={values} />
+      ))
+    }
+  </div>
+</section>

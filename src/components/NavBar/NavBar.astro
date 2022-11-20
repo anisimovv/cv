@@ -29,9 +29,9 @@ const links = [
 ];
 ---
 
-<nav class="max-w-4xl mx-auto">
+<nav class="max-w-4xl mx-auto max-md:hidden">
   <ul class="grid grid-flow-col">
     {links.map((link) => <NavBarLink name={link.name} link={link.link} />)}
   </ul>
 </nav>
-<div class="mb-16 h-[1px] bg-slate-200" />
+<div class="mb-16 h-[1px] bg-slate-200 max-md:hidden"></div>

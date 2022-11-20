@@ -1,66 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SkillCard from "../components/SkillCard.astro";
 import TimelineArticle from "../components/TimelineArticle.astro";
 import CoursesCard from "../components/CoursesCard.astro";
 import Pill from "../components/Pill.astro";
 import "@fontsource/inter";
 import NavBar from "../components/NavBar/NavBar.astro";
 import Header from "../components/Header/Header.astro";
-
-const skills = [
-  {
-    title: "Core",
-    values: ["HTML", "CSS", "Java Script", "Type Script"],
-  },
-  {
-    title: "Frameworks",
-    values: ["React", "Next.js", "Astro", "Remix"],
-  },
-  {
-    title: "Styling",
-    values: ["Css modules", "Sass / Scss", "css-in-js", "Tailwind"],
-  },
-  {
-    title: "UI libraries",
-    values: ["Headless UI", "Radix", "Material UI", "Bootstrap"],
-  },
-  {
-    title: "State libraries",
-    values: [
-      "React Query / Apollo",
-      "Redux / Redux Toolkit",
-      "Zustand",
-      "Jotai",
-    ],
-  },
-  {
-    title: "Databases",
-    values: ["Planetscale", "Postgress", "Mysql / SQLight", "Mongodb"],
-  },
-  {
-    title: "ORM / ODM",
-    values: ["Prisma", "Type ORM", "Mongoose"],
-  },
-  {
-    title: "Mobile",
-    values: [
-      "React Native",
-      "Expo",
-      "React Navigation",
-      "React Native Reanimated",
-    ],
-  },
-  {
-    title: "Other",
-    values: [
-      "t3 stack",
-      "Vercel / Netlify / Heroku",
-      "AWS / Digital Ocean",
-      "Strapi / Story Block",
-    ],
-  },
-];
+import Skills from "../components/Skills/Skills.astro";
 
 const workExperience = [
   {
@@ -118,19 +64,7 @@ const courses = [
   <Header />
   <main>
     <NavBar />
-    <section class="max-w-4xl mx-auto mb-32">
-      <Pill text="Skills" customClassname="mb-2" />
-      <h1 class="font-bold text-4xl max-w-lg mb-10">
-        List of tech and libraries used in recent projects
-      </h1>
-      <div class="grid grid-cols-3 gap-6">
-        {
-          skills.map(({ title, values }) => (
-            <SkillCard title={title} values={values} />
-          ))
-        }
-      </div>
-    </section>
+    <Skills />
     <section class="border-l border-slate-200 max-w-4xl mx-auto mb-32">
       {
         workExperience.map(({ title, subTitle, date, description }) => (
