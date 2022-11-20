@@ -1,0 +1,37 @@
+---
+import NavBarLink from "./NavBarLink.astro";
+
+export interface Props {}
+
+const {} = Astro.props;
+
+const links = [
+  {
+    name: "Skills",
+    link: "#skills",
+  },
+  {
+    name: "Education",
+    link: "#education",
+  },
+  {
+    name: "Work experience",
+    link: "#workExperience",
+  },
+  {
+    name: "Cources",
+    link: "#cources",
+  },
+  {
+    name: "Projects",
+    link: "#projects",
+  },
+];
+---
+
+<nav class="max-w-4xl mx-auto">
+  <ul class="grid grid-flow-col">
+    {links.map((link) => <NavBarLink name={link.name} link={link.link} />)}
+  </ul>
+</nav>
+<div class="mb-16 h-[1px] bg-slate-200" />
