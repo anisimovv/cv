@@ -1,36 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import TimelineArticle from "../components/TimelineArticle.astro";
 import CoursesCard from "../components/CoursesCard.astro";
 import Pill from "../components/Pill.astro";
 import "@fontsource/inter";
 import NavBar from "../components/NavBar/NavBar.astro";
 import Header from "../components/Header/Header.astro";
 import Skills from "../components/Skills/Skills.astro";
-
-const workExperience = [
-  {
-    title: "Frontend developer",
-    subTitle: "Yaroslav Mudryi National Law University",
-    date: "2018 - 2019",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ",
-  },
-  {
-    title: "JS Team Lead",
-    subTitle: "Headworks - mobile and web app development company",
-    date: "2019 - 2022",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    title: "Full stack developer | CEO",
-    subTitle: "Aquinas - application development",
-    date: "2022 - now",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-  },
-];
+import Timeline from "../components/Timeline/Timeline.astro";
 
 const courses = [
   {
@@ -65,20 +41,9 @@ const courses = [
   <main>
     <NavBar />
     <Skills />
-    <section class="border-l border-slate-200 max-w-4xl mx-auto mb-32">
-      {
-        workExperience.map(({ title, subTitle, date, description }) => (
-          <TimelineArticle
-            title={title}
-            subTitle={subTitle}
-            description={description}
-            date={date}
-          />
-        ))
-      }
-    </section>
+    <Timeline />
     <section class="max-w-4xl mx-auto mb-10">
-      <Pill text="Courses" customClassname="mb-2" />
+      <Pill text="Courses" className="mb-2" />
 
       <h1 class="font-bold text-4xl max-w-lg mb-10 font-sans">
         List of tech and libraries used in recent projects
