@@ -1,39 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CoursesCard from "../components/CoursesCard.astro";
 import Pill from "../components/Pill.astro";
 import "@fontsource/inter";
 import NavBar from "../components/NavBar/NavBar.astro";
 import Header from "../components/Header/Header.astro";
 import Skills from "../components/Skills/Skills.astro";
 import Timeline from "../components/Timeline/Timeline.astro";
-
-const courses = [
-  {
-    title: "React - the complete guide",
-    author: "Maximilian Schwarzmuller",
-  },
-  {
-    title: "NodeJs the complete guide",
-    author: "Maximilian Schwarzmuller",
-  },
-  {
-    title: "React Native the practical guide",
-    author: "Maximilian Schwarzmuller",
-  },
-  {
-    title: "Complete react developer",
-    author: "Andrei Neagoie",
-  },
-  {
-    title: "Epic React",
-    author: "Kent C. Dodds",
-  },
-  {
-    title: "Just Java Script",
-    author: "Dan Abramov",
-  },
-];
+import Courses from "../components/Courses/Courses.astro";
 ---
 
 <Layout title="Kyrylo Moghoshiia CV">
@@ -42,19 +15,6 @@ const courses = [
     <NavBar />
     <Skills />
     <Timeline />
-    <section class="max-w-4xl mx-auto mb-10">
-      <Pill text="Courses" className="mb-2" />
-
-      <h1 class="font-bold text-4xl max-w-lg mb-10 font-sans">
-        List of tech and libraries used in recent projects
-      </h1>
-      <div class="grid gap-6 grid-cols-3">
-        {
-          courses.map(({ title, author }) => (
-            <CoursesCard title={title} author={author} />
-          ))
-        }
-      </div>
-    </section>
+    <Courses />
   </main>
 </Layout>

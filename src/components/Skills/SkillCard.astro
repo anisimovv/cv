@@ -6,9 +6,8 @@ export interface Props {
 
 const { title, values } = Astro.props;
 ---
-<div
-  class="text-slate-800 border border-slate-200 rounded-xl p-6 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] hover:from-slate-600 hover:to-slate-900 hover:text-white"
->
+
+<div class="text-slate-800 border border-slate-200 rounded-xl p-6">
   <lh class="font-bold mb-2">{title}</lh>
   <ul class="">
     {values.map((value) => <li class="list-disc ml-4 text-sm">{value}</li>)}

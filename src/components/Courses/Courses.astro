@@ -1,0 +1,44 @@
+---
+import Pill from "../Pill.astro";
+import SectionTitle from "../SectionTitle.astro";
+import CoursesCard from "./CoursesCard.astro";
+const courses = [
+  {
+    title: "React - the complete guide",
+    author: "Maximilian Schwarzmuller",
+  },
+  {
+    title: "NodeJs the complete guide",
+    author: "Maximilian Schwarzmuller",
+  },
+  {
+    title: "React Native the practical guide",
+    author: "Maximilian Schwarzmuller",
+  },
+  {
+    title: "Complete react developer",
+    author: "Andrei Neagoie",
+  },
+  {
+    title: "Epic React",
+    author: "Kent C. Dodds",
+  },
+  {
+    title: "Just Java Script",
+    author: "Dan Abramov",
+  },
+];
+---
+
+<section class="max-w-4xl mx-auto mb-10 p-6">
+  <Pill text="Courses" className="mb-2" />
+  <SectionTitle text="List of tech and libraries used in recent projects" />
+
+  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+    {
+      courses.map(({ title, author }) => (
+        <CoursesCard title={title} author={author} />
+      ))
+    }
+  </div>
+</section>
