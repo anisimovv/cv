@@ -9,7 +9,7 @@ export interface Props {
 const { className } = Astro.props;
 ---
 
-<ul class={clsx("flex text-sm leading-none text-slate-600", className)}>
+<ul class={clsx("flex flex-col sm:flex-row text-sm leading-tight text-slate-600", className)}>
   <ContactListItem label="kirill.anisimovv@gmail.com" />
   <ContactListItem label="Kharkiv, Ukraine" />
   <ContactListItem label="December 10, 1994" />

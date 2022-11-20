@@ -4,9 +4,9 @@ import SkillCard from "../components/SkillCard.astro";
 import TimelineArticle from "../components/TimelineArticle.astro";
 import CoursesCard from "../components/CoursesCard.astro";
 import Pill from "../components/Pill.astro";
-import ContactList from "../components/ContactList/ContactList.astro";
 import "@fontsource/inter";
 import NavBar from "../components/NavBar/NavBar.astro";
+import Header from "../components/Header/Header.astro";
 
 const skills = [
   {
@@ -115,24 +115,7 @@ const courses = [
 ---
 
 <Layout title="Kyrylo Moghoshiia CV">
-  <header class="flex justify-between max-w-4xl mx-auto my-20">
-    <div class="max-w-lg">
-      <h1 class="font-black text-4xl mb-2 text-slate-800">Kyrylo Morhoshiia</h1>
-      <ContactList className="mb-4" />
-      <p class="text-slate-800 leading-relaxed">
-        Software engenieer mainly focused on React ecosystem. I like to build
-        typesafe fullstack applications using cutting edge tech. Also I’m
-        founder of small outsourcing agency.
-      </p>
-    </div>
-    <img
-      class="rounded-full w-[150px] h-[150px]"
-      width="150"
-      height="150"
-      src="/assets/avatar.jpg"
-      alt="Kryrlo Morhoshiia avatar"
-    />
-  </header>
+  <Header />
   <main>
     <NavBar />
     <section class="max-w-4xl mx-auto mb-32">

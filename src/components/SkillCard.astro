@@ -7,9 +7,11 @@ export interface Props {
 const { title, values } = Astro.props;
 ---
 
-<div class="border border-slate-200 rounded-xl p-6">
-  <h3 class="font-bold mb-4">{title}</h3>
+<div
+  class="text-slate-800 border border-slate-200 rounded-xl p-6 bg-gradient-to-tr hover:from-indigo-50 hover:to-blue-50"
+>
+  <lh class="font-bold mb-2">{title}</lh>
   <ul class="">
-    {values.map((value) => <li class="list-disc ml-4">{value}</li>)}
+    {values.map((value) => <li class="list-disc ml-4 text-sm">{value}</li>)}
   </ul>
 </div>
