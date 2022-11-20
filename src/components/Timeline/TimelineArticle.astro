@@ -10,8 +10,8 @@ const { title, subTitle, date, description } = Astro.props;
 ---
 
 <article class="flex flex-col sm:flex-row mb-16">
-  <div class="sm:w-[270px] sm:px-4 text-xs text-slate-600 mb-1">{date}</div>
-  <div>
+  <div class="sm:w-[150px] sm:px-4 text-xs text-slate-600 mb-1">{date}</div>
+  <div class="w-full">
     <h1 class="font-bold text-lg leading-none mb-1 text-slate-800">{title}</h1>
     <div class="text-sm mb-4 text-slate-600">{subTitle}</div>
     <p class="text-slate-800">{description}</p>

@@ -2,7 +2,9 @@
 import ContactList from "../ContactList/ContactList.astro";
 ---
 
-<header class="flex flex-col sm:flex-row-reverse justify-between p-6 container max-w-4xl mx-auto my-14">
+<header
+  class="flex flex-col sm:flex-row-reverse justify-between p-6 container max-w-4xl mx-auto my-14"
+>
   <img
     class="rounded-full w-[80px] h-[80px] md:w-[150px] md:h-[150px] mb-8"
     width="150"
@@ -11,12 +13,14 @@ import ContactList from "../ContactList/ContactList.astro";
     alt="Kryrlo Morhoshiia avatar"
   />
   <div class="max-w-lg">
-    <h1 class="font-black text-2xl sm:text-4xl mb-2 text-slate-800">Kyrylo Morhoshiia</h1>
+    <h1 class="font-black text-2xl sm:text-4xl mb-2 text-slate-800">
+      Kyrylo Morhoshiia
+    </h1>
     <ContactList className="mb-4" />
     <p class="text-slate-800 leading-relaxed">
-      Software engenieer mainly focused on React ecosystem. I like to build
-      typesafe fullstack applications using cutting edge tech. Also I’m founder
-      of small outsourcing agency.
+      Software engenieer mainly focused on React ecosystem. I build typesafe
+      fullstack applications using cutting edge tech. Also I’m founder of small
+      outsourcing agency.
     </p>
   </div>
 </header>
