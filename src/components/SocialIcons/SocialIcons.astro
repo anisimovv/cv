@@ -1,0 +1,28 @@
+---
+import type { IconType } from "../Icon.astro";
+import SocialIcon from "./SocialIcon.astro";
+
+const links: { icon: IconType; title: string; link: string }[] = [
+  { icon: "github", title: "Github", link: "https://github.com/anisimovv" },
+  {
+    icon: "upwork",
+    title: "Upwork",
+    link: "https://www.upwork.com/freelancers/~01b30bd243895efcb1",
+  },
+  {
+    icon: "linkedin",
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/kirill-anisimovv-97a340102/",
+  },
+  { icon: "twitter", title: "Twitter", link: "https://twitter.com/k_anisimovv" },
+  { icon: "instagram", title: "Instagram", link: "https://www.instagram.com/kirill.anisimovv/" },
+];
+---
+
+<div class="inline-grid grid-cols-5 gap-6">
+  {
+    links.map((link) => (
+      <SocialIcon icon={link.icon} title={link.title} link={link.link} />
+    ))
+  }
+</div>

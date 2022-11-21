@@ -1,0 +1,36 @@
+---
+import { parse } from "node-html-parser";
+
+export type IconType = "instagram" | "twitter" | "github" | "linkedin" | "upwork"
+export interface Props {
+  icon: IconType;
+}
+
+function getSVG(name: string) {
+  const filepath = `/src/svg/${name}.svg`;
+  const files = import.meta.globEager<string>("/src/svg/**/*.svg", {
+    as: "raw",
+  });
+
+  if (!(filepath in files)) {
+    throw new Error(`${filepath} not found`);
+  }
+
+  const root = parse(files[filepath] as string);
+
+  const svg = root.querySelector("svg");
+  const { attributes, innerHTML } = svg as any;
+
+  return {
+    attributes,
+    innerHTML,
+  };
+}
+
+const { icon, ...attributes } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = getSVG(icon);
+
+const svgAttributes = { ...baseAttributes, ...attributes };
+---
+
+<svg {...svgAttributes} set:html={innerHTML} />
