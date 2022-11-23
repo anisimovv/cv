@@ -1,5 +1,7 @@
 ---
+import Container from "../Container.astro";
 import Pill from "../Pill.astro";
+import Section from "../Section.astro";
 import SectionTitle from "../SectionTitle.astro";
 import SkillCard from "./SkillCard.astro";
 
@@ -58,14 +60,18 @@ const skills = [
 ];
 ---
 
-<section class="max-w-4xl mx-auto mb-16 sm:mb-32 p-6">
-  <Pill text="Skills" className="mb-2" />
-  <SectionTitle text="List of tech and libraries used in recent projects" />
-  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+<!-- <section class="max-w-4xl mx-auto mb-16 sm:mb-32 p-6"> -->
+<Section>
+  <Container>
+    <Pill text="Skills" className="mb-2" />
+    <SectionTitle text="List of tech and libraries used in recent projects" />
+  </Container>
+  <Container className="max-w-6xl grid gap-6 sm:grid-cols-2 md:grid-cols-3">
     {
       skills.map(({ title, values }) => (
         <SkillCard title={title} values={values} />
       ))
     }
-  </div>
-</section>
+  </Container>
+</Section>
+<!-- </section> -->

@@ -1,6 +1,8 @@
 ---
 import Pill from "../Pill.astro";
 import TimelineArticle from "./TimelineArticle.astro";
+import Section from "../Section.astro";
+import Container from "../Container.astro";
 
 const education = [
   {
@@ -37,29 +39,33 @@ const workExperience = [
 ];
 ---
 
-<section class="relative max-w-4xl mx-auto mb-6 sm:mb-20 p-6">
-  <div class="max-sm:hidden h-full w-[1px] bg-slate-200 absolute left-6 top-0">
-  </div>
-  <Pill text="Education" className="mb-8 sm:mb-10 sm:ml-3" />
-  {
-    education.map(({ title, subTitle, date, description }) => (
-      <TimelineArticle
-        title={title}
-        subTitle={subTitle}
-        description={description}
-        date={date}
-      />
-    ))
-  }
-  <Pill text="Experience" className="mb-8 sm:mb-10 sm:ml-3" />
-  {
-    workExperience.map(({ title, subTitle, date, description }) => (
-      <TimelineArticle
-        title={title}
-        subTitle={subTitle}
-        description={description}
-        date={date}
-      />
-    ))
-  }
-</section>
+<Section>
+  <Container className="relative sm:pl-8">
+    <div
+      class="max-sm:hidden h-full w-[1px] bg-slate-200 absolute left-6 top-0"
+    >
+    </div>
+    <Pill text="Education" className="mb-8 sm:mb-10 sm:ml-3" />
+    {
+      education.map(({ title, subTitle, date, description }) => (
+        <TimelineArticle
+          title={title}
+          subTitle={subTitle}
+          description={description}
+          date={date}
+        />
+      ))
+    }
+    <Pill text="Experience" className="mb-8 sm:mb-10 sm:ml-3" />
+    {
+      workExperience.map(({ title, subTitle, date, description }) => (
+        <TimelineArticle
+          title={title}
+          subTitle={subTitle}
+          description={description}
+          date={date}
+        />
+      ))
+    }
+  </Container>
+</Section>
