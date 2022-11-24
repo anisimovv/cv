@@ -1,0 +1,36 @@
+---
+import Container from "../Container.astro";
+import RectPattern from "../Patterns/RectPattern.astro";
+import Section from "../Section.astro";
+
+export interface Props {
+  quote: string;
+  author: string;
+  // authorAvatar: string;
+  company: string;
+}
+
+const { quote, author, company } = Astro.props;
+---
+
+<Section as="aside" className="relative bg-slate-100">
+  <div class="absolute inset-0 w-full h-full">
+    <RectPattern />
+  </div>
+  <Container
+    className="relative text-center max-w-lg flex flex-col justify-center items-center"
+  >
+    <figure>
+      <blockquote class="leading-relaxed text-xl italic mb-8">
+        {quote}
+      </blockquote>
+      <footer class="flex justify-center">
+        <div class="max-w-sm mx-auto flex items-center">
+          <cite class="not-italic font-bold">{author}</cite>
+          &nbsp; - &nbsp;
+          <cite class="text-slate-600 text-sm not-italic">{company}</cite>
+        </div>
+      </footer>
+    </figure>
+  </Container>
+</Section>

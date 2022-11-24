@@ -5,16 +5,24 @@ import Header from "../components/Header/Header.astro";
 import Skills from "../components/Skills/Skills.astro";
 import Timeline from "../components/Timeline/Timeline.astro";
 import Courses from "../components/Courses/Courses.astro";
-import Section from "../components/Section.astro";
-import Projects from "../components/Projects/Projects.astro";
+import Testimonial from "../components/Testimonial/Testimonial.astro";
 ---
 
 <Layout title="Kyrylo Moghoshiia CV">
   <Header />
   <main>
     <Skills />
+    <Testimonial
+      author="James"
+      company="Media Flow"
+      quote="Kirill was a pleasure to work with, he understood our brief and made sure to do kick off call so all elements were fully clear before work started. He is  proactive and will work with you to find solutions to the challenges you have and his collaborative work style made the process far easier."
+    />
     <Timeline />
+    <Testimonial
+      author="Jagosh"
+      company="Biox"
+      quote="React.js master. One of the best frontend developers you can find. Will be working with Kyrylo in the future."
+    />
     <Courses />
-    <!-- <Projects /> -->
   </main>
 </Layout>
