@@ -1,6 +1,7 @@
 ---
 import ContactList from "../ContactList/ContactList.astro";
 import Container from "../Container.astro";
+import RectPattern from "../Patterns/RectPattern.astro";
 import SocialIcons from "../SocialIcons/SocialIcons.astro";
 ---
 
@@ -8,19 +9,7 @@ import SocialIcons from "../SocialIcons/SocialIcons.astro";
   <div
     class="absolute inset-0 text-slate-200 [mask-image:linear-gradient(white,transparent)]"
   >
-    <svg aria-hidden="true" class="absolute inset-0 h-full w-full"
-      ><defs
-        ><pattern
-          id=":R6lm:"
-          width="64"
-          height="64"
-          patternUnits="userSpaceOnUse"
-          x="50%"
-          y="20%"
-          ><path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-        </pattern>
-      </defs><rect width="100%" height="100%" fill="url(#:R6lm:)"></rect>
-    </svg>
+    <RectPattern />
   </div>
 
   <Container
