@@ -2,10 +2,11 @@
 import ContactList from "../ContactList/ContactList.astro";
 import Container from "../Container.astro";
 import RectPattern from "../Patterns/RectPattern.astro";
+import Section from "../Section.astro";
 import SocialIcons from "../SocialIcons/SocialIcons.astro";
 ---
 
-<header class="relative py-20 bg-slate-50">
+<Section as="header" className="relative bg-slate-50">
   <div
     class="absolute inset-0 text-slate-200 [mask-image:linear-gradient(white,transparent)]"
   >
@@ -34,4 +35,4 @@ import SocialIcons from "../SocialIcons/SocialIcons.astro";
       <SocialIcons />
     </div>
   </Container>
-</header>
+</Section>

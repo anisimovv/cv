@@ -1,0 +1,23 @@
+---
+import clsx from "clsx";
+
+export interface Props {
+  className?: string;
+  noPadding?: boolean;
+  as?: "div" | "li" | "article";
+}
+
+const { className, noPadding = false, as = "div" } = Astro.props;
+
+const As = as;
+---
+
+<As
+  class={clsx(
+    "text-slate-800 border border-slate-200 bg-white shadow-sm rounded-xl hover:shadow-md",
+    !noPadding && "p-6",
+    className
+  )}
+>
+  <slot />
+</As>

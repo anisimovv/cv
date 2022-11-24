@@ -33,11 +33,14 @@ const courses = [
 ---
 
 <Section>
-  <Container>
+  <Container as="header">
     <Pill text="Courses" className="mb-2" />
     <SectionTitle text="I take online courses to keep my skills sharp" />
   </Container>
-  <Container className="max-w-6xl grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+  <Container
+    as="ul"
+    className="max-w-6xl grid gap-6 sm:grid-cols-2 md:grid-cols-3"
+  >
     {
       courses.map(({ title, author }) => (
         <CoursesCard title={title} author={author} />

@@ -1,5 +1,5 @@
 ---
-import RectPattern from "../Patterns/RectPattern.astro";
+import Card from "../Card.astro";
 
 export interface Props {
   title: string;
@@ -9,11 +9,9 @@ export interface Props {
 const { title, values } = Astro.props;
 ---
 
-<div
-  class="text-slate-800 border border-slate-200 bg-white shadow-sm rounded-xl p-6 hover:shadow-md"
->
+<Card>
   <lh class="font-bold mb-2">{title}</lh>
   <ul class="">
     {values.map((value) => <li class="list-disc ml-4 text-sm">{value}</li>)}
   </ul>
-</div>
+</Card>

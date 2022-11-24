@@ -1,4 +1,6 @@
 ---
+import Card from "../Card.astro";
+
 export interface Props {
   title: string;
   author: string;
@@ -7,9 +9,7 @@ export interface Props {
 const { title, author } = Astro.props;
 ---
 
-<article
-  class="border border-slate-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md"
->
+<Card as='li'>
   <h1 class="text-sm font-bold mb-1 text-slate-800">{title}</h1>
   <div class="text-sm text-slate-600">{author}</div>
-</article>
+</Card>

@@ -3,9 +3,11 @@ import clsx from "clsx";
 
 export interface Props {
   className?: string;
+  as?: "div" | "header" | "section";
 }
 
-const { className } = Astro.props;
+const { className, as = "section" } = Astro.props;
+const As = as;
 ---
 
-<section class={clsx("py-20", className)}><slot /></section>
+<As class={clsx("py-20", className)}><slot /></As>
