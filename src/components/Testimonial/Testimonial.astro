@@ -1,5 +1,6 @@
 ---
 import Container from "../Container.astro";
+import Icon from "../Icon.astro";
 import RectPattern from "../Patterns/RectPattern.astro";
 import Section from "../Section.astro";
 
@@ -21,6 +22,13 @@ const { quote, author, company } = Astro.props;
     className="relative text-center flex flex-col justify-center items-center"
   >
     <figure>
+      <div class="flex mx-auto w-fit mb-4 text-blue-500">
+        <Icon icon="star" />
+        <Icon icon="star" />
+        <Icon icon="star" />
+        <Icon icon="star" />
+        <Icon icon="star" />
+      </div>
       <blockquote class="leading-relaxed text-xl italic mb-8">
         &ldquo;{quote}&rdquo;
       </blockquote>
