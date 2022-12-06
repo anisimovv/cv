@@ -6,10 +6,13 @@ import Skills from "../components/Skills/Skills.astro";
 import Timeline from "../components/Timeline/Timeline.astro";
 import Courses from "../components/Courses/Courses.astro";
 import Testimonial from "../components/Testimonial/Testimonial.astro";
+import Collapsible from "../components/Collapsible/Collapsible";
+import Container from "../components/Container.astro";
 ---
 
 <Layout title="Kyrylo Moghoshiia CV">
   <Header />
+  <Container className='my-6'><Collapsible client:load /></Container>
   <main>
     <Skills />
     <Testimonial
