@@ -1,41 +1,20 @@
 ---
-import Card from "../Card.astro";
+import Collapsible from "../Collapsible/Collapsible";
 import Container from "../Container.astro";
-import Pill from "../Pill.astro";
 import Section from "../Section.astro";
-import SectionTitle from "../SectionTitle.astro";
+import Project from "./Project.astro";
 
-const projects = [
-  {
-    id: "1",
-    name: "Project sample name",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    stack: ["React", "Graphql", "TRPC"],
-  },
-  {
-    id: "2",
-    name: "Project sample name",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    stack: ["React", "Graphql", "TRPC"],
-  },
-  {
-    id: "3",
-    name: "Project sample name",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    stack: ["React", "Graphql", "TRPC"],
-  },
-];
+import { projects } from "./projects-data";
 ---
 
-<Section>
-  <Container>
-    <Pill text="Projects" className="mb-2" />
-    <SectionTitle text="Projects I've recently worked on" />
-  </Container>
-  <Container className="grid grid-flow-col gap-6 max-w-6xl">
-    {projects.map((project) => <Card>{project.name}</Card>)}
+<Section
+  ><Container className="max-w-6xl grid grid-cols-2 gap-8">
+    {
+      projects.map((item) => (
+        <div>
+          <Project {...item} />
+        </div>
+      ))
+    }
   </Container>
 </Section>

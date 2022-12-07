@@ -1,0 +1,44 @@
+---
+import clsx from "clsx";
+
+export interface Props {
+  title: string;
+  description: string;
+  accomplishments: string[];
+  techTags: string[];
+  projectLink?: string;
+}
+
+const { title, description, accomplishments, techTags, projectLink } =
+  Astro.props;
+---
+
+<article class="bg-white border border-slate-100 shadow-sm rounded-xl overflow-hidden">
+  <header class="flex px-6 bg-slate-100 text-slate-700 justify-between items-center">
+    <h1 class="text-lg font-bold py-4">
+      {title}
+    </h1>
+    {
+      projectLink ? (
+        <a href="#" class="text-xs text-slate-500" target="_blanc">
+          {" "}
+          {projectLink}
+        </a>
+      ) : <span class="text-xs text-slate-500">NDA</span>
+    }
+  </header>
+
+  <div class="p-6 text-sm">
+    <p class="mb-6 text-slate-700 text-sm">{description}</p>
+    <h1 class="font-bold text-slate-700 mb-2">My accomplishments:</h1>
+    <ul class="list-disc pl-4 text-slate-700 leading-relaxed">
+      {accomplishments.map((accomplishment) => <li>{accomplishment}</li>)}
+    </ul>
+  </div>
+
+  <footer>
+    <div class="text-xs">
+      {techTags.map((tag) => <span>{tag}</span>)}
+    </div>
+  </footer>
+</article>
