@@ -1,14 +1,24 @@
 ---
 import Collapsible from "../Collapsible/Collapsible";
 import Container from "../Container.astro";
+import RectPattern from "../Patterns/RectPattern.astro";
+import Pill from "../Pill.astro";
 import Section from "../Section.astro";
+import SectionTitle from "../SectionTitle.astro";
 import Project from "./Project.astro";
 
 import { projects } from "./projects-data";
 ---
 
-<Section
-  ><Container className="max-w-6xl grid md:grid-cols-2 gap-8">
+<Section className="relative">
+  <div class="absolute inset-0 [mask-image:linear-gradient(white,transparent)]">
+    <RectPattern />
+  </div>
+  <Container className="relative">
+    <Pill text="Projects" className="mb-2" />
+    <SectionTitle text="Some projects I worked on before" />
+  </Container>
+  <Container className="relative max-w-6xl grid md:grid-cols-2 gap-8">
     {projects.map((item) => <Project {...item} />)}
   </Container>
 </Section>

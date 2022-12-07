@@ -13,7 +13,7 @@ const { title, description, accomplishments, techTags, projectLink } =
   Astro.props;
 ---
 
-<article class="bg-white border border-slate-100 shadow-sm rounded-xl overflow-hidden">
+<article class="flex flex-col bg-white border border-slate-100 shadow-sm rounded-xl overflow-hidden">
   <header class="flex px-6 bg-slate-100 text-slate-700 justify-between items-center">
     <h1 class="text-lg font-bold py-4">
       {title}
@@ -36,9 +36,9 @@ const { title, description, accomplishments, techTags, projectLink } =
     </ul>
   </div>
 
-  <footer>
+  <footer class="p-6 mt-auto">
     <div class="text-xs">
-      {techTags.map((tag) => <span>{tag}</span>)}
+      {techTags.map((tag) => <span>{tag} </span>)}
     </div>
   </footer>
 </article>
