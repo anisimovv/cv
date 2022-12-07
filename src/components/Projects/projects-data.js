@@ -46,7 +46,7 @@ export const projects = [
     projectLink: "https://pafory.com",
   },
   {
-    title: "Expetitle (now Therealtitle)",
+    title: "Expetitle",
     description:
       "Expetitle - American startup which helps title agents automate internal processes when making operations with real estate. Was acquired by The Real Brokerage.",
     accomplishments: [
