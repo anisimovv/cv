@@ -13,18 +13,29 @@ const { title, description, accomplishments, techTags, projectLink } =
   Astro.props;
 ---
 
-<article class="flex flex-col bg-white border border-slate-100 shadow-sm rounded-xl overflow-hidden">
-  <header class="flex px-6 bg-slate-100 text-slate-700 justify-between items-center">
+<article
+  class="flex flex-col bg-white border border-slate-100 shadow-sm rounded-xl overflow-hidden"
+>
+  <header
+    class="flex px-6 bg-slate-100 text-slate-700 justify-between items-center"
+  >
     <h1 class="text-lg font-bold py-4">
       {title}
     </h1>
     {
       projectLink ? (
-        <a href="#" class="text-xs text-slate-500" target="_blanc">
+        <a
+          href={projectLink}
+          class="text-xs text-slate-500"
+          target="_blanc"
+          rel="noopener noreferrer"
+        >
           {" "}
           {projectLink}
         </a>
-      ) : <span class="text-xs text-slate-500">NDA</span>
+      ) : (
+        <span class="text-xs text-slate-500">NDA</span>
+      )
     }
   </header>
 
